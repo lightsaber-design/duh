@@ -3,7 +3,6 @@
 *::before {
 	box-sizing: border-box;
 }
-
 :root {
 	font-size: 16px;
 }
@@ -198,7 +197,7 @@ a:focus {
 
 .content__item-img {
 
-	height: 60vh;
+	height: 40vh;
 	top: 20vh;
 	width: 100%;
 	position: absolute;

@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+
 section {
-    height: 150vh;
+    
     width: 100vw;
+    height: 100vh;
    
+}
+.active {
+    border: 1px solid green
+    
 }
 
 
+span {
+    font-weight: 600;
+}
 nav {
     background-color: transparent;
     box-shadow: unset;
@@ -17,6 +29,15 @@ nav {
     
 }
 
+.sidenav {
+    background-color: #06273a;
+    
+}
+
+.sidenav li a{
+    color: white
+}
+
 .scrolled {
     background-color: #f6f6ee;
   
@@ -24,7 +45,7 @@ nav {
 }
 
 .scrolled a{
-    color: #222!important;
+    color: #06273a!important;
 }
 nav ul a{
 
@@ -55,10 +76,19 @@ nav ul {
     mix-blend-mode: soft-light;
 
 }
+
+.content__item-img {
+    top:0vh
+}
 .content__item-description{
     margin: 8vw;
+    font-family: 'Lato', sans-serif;
+    color: #06273a;
 }
 
+.content__item-number {
+    display: none;
+}
 .content__item-img:hover{
     filter: grayscale(50%);
 }
@@ -68,20 +98,32 @@ nav ul {
     color: white;
 }
 
+#about img {
+    display: none;
+}
+#about .content__item-description {
+    display: none
+}
 #home .content__item-img,
 #contact .content__item-img {
     top: 0;
     filter: grayscale(0%);
     background-position: center;
+    height: 160vh;
+     margin-top: -10vh;
     
 }
-#home h2{
-    mix-blend-mode: difference;
-    font-size: 10vh;
-    width: 80vw;
-    text-align: center;
-   
+#home svg {
+    width: 20vh;
+    height: 20vh;
+}
+
+#home .content__item-title {
     
+    margin-top: 50vh;
+    width: 100vw;
+    text-align: center;
+    mix-blend-mode: luminosity;
 }
 #home .content__item-imgwrap {
     width: 100vw;
@@ -97,7 +139,10 @@ nav ul {
 }
 
 
+#contact .content__item-img{
 
+    left: 18vw;
+}
 
 #contact .content__item-imgwrap{
     margin-left: -10vh;
@@ -107,12 +152,22 @@ nav ul {
 
 }
 
-#contact .content__item-img{
-    height: 150vh;
-    left: -5vw;
+    #about .content__item-title,
+    #contact .content__item-title{
+        font-size: 3vh;
+        line-height: 1;
+        text-transform: none;
+        margin-left: 10vw;
+        width: 80vw;
+        color: #06273a;
+        font-family: 'Lato', sans-serif;
+    
+    }
+
+#about .content__item-title {
+    margin-top: -40vh;
+    color: white
 }
-
-
 
 
 #about img{
@@ -123,34 +178,29 @@ nav ul {
 
 }
 
-#about .content__item-title,
-#contact .content__item-title{
-    font-size: 4vh;
-    line-height: 1.5;
-    text-transform: none;
-    margin-bottom: 90vh;
-    margin-left: 15vh;
-   
-}
-#contact .content__item-title{
-    width: 40vw;
-    margin-top: -10vh;
-    
-}
+
+
 .content__item{
     margin-bottom: 0;
 }
 
+
+#contact .content__item-description {
+    margin-top: -70vh
+}
 
 #about .content__item-number,
 #about h2, #about h5 {
     color: #8bc8e0;
 }
 
+
 #web .content__item-number,
-#web h2, #web h5 {
+#web h2, #web h5{
     color: #719ec3;
 }
+
+
 
 #admin .content__item-number,
 #admin h2, #admin h5 {
@@ -181,10 +231,25 @@ h4{
     color:#62b6e9
 }
 
+.validate {
+    color: white
+}
+
+.btn-large {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.btn-large:hover {
+    background-color:#06273a ;
+    color: white
+}
 @media only screen and (min-width: 850px) {
+    section {
+        height: 150vh;
+    }
 
-
-
+   
     #home .content__item-imgwrap,
     #home .content__item-img
     {
@@ -193,9 +258,24 @@ h4{
     }
     #home .content__item-title {
         margin-top: -100vh;
-        mix-blend-mode: luminosity;
+        font-size: 10vh;
+        width: 80vw;
+
+    }
+    #about img{
+        display: block;
     }
 
+
+
+    #about .content__item-title,
+    #contact .content__item-title{
+       
+        margin-bottom: 90vh;
+        margin-left: 15vh;
+        color: white
+    
+    }
     .content__item{
         width: 80vw;
         margin: auto
@@ -205,6 +285,14 @@ h4{
         
     }
 
+    .content__item-img {
+        top:20vh;
+        height: 60vh;
+    }
+
+    .content__item-number {
+        display: block
+    }
     .content__item-title {
         margin-top: -80vh;
     }
@@ -235,7 +323,21 @@ h4{
         width: 25vw!important;
         margin-top:-80vh
     }
+    #contact .content__item-img{
+        height: 150vh;
+        left: -5vw;
+       
+    }
 
+    #contact .content__item-title{
+        width: 40vw;
+        margin-top: -10vh;
+        
+    }
+
+    #contact .content__item-description {
+        margin-top: -80vh
+    }
 
   }
 
