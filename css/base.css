@@ -224,7 +224,7 @@ a:focus {
 	opacity: 0.8;
 	font-size: 6vw;
 	position: absolute;
-
+	font-weight: 300;
 	right: 0;
 	line-height: 1;
 	text-transform: uppercase;

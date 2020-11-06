@@ -76,7 +76,7 @@
                     setValue: () => {
                         const fromValue = this.renderedStyles.titleTranslationY.fromValue;
                         const toValue = -1*fromValue;
-                        const val = MathUtils.map(this.props.top - docScroll, winsize.height, -.5 * this.props.height, fromValue, toValue);
+                        const val = MathUtils.map(this.props.top - docScroll, winsize.height, -1 * this.props.height, fromValue, toValue);
                         return fromValue < 0 ? Math.min(Math.max(val, fromValue), toValue) : Math.max(Math.min(val, fromValue), toValue);
                     }
                 }
